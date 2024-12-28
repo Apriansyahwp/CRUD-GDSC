@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Jual Beli Barang Bekas | Apriansyah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">Toko Jual Beli Barang Bekas</h1>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Tambahkan Barang</h2>
+        <form id="itemForm" class="space-y-4">
+            <input type="hidden" id="itemId">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                <input type="text" id="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+            </div>
+            <div>
+                <label for="price" class="block text-sm font-medium text-gray-700">Price:</label>
+                <input type="number" id="price" step="0.01" min="0" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+            </div>
+            <div>
+                <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity:</label>
+                <input type="number" id="quantity" min="0" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md shadow-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-6">
+        <h2 class="text-2xl font-semibold mb-4">Items</h2>
+        <table id="itemsTable" class="min-w-full bg-white border border-gray-200">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border">ID Barang</th>
+                    <th class="px-4 py-2 border">Name</th>
+                    <th class="px-4 py-2 border">Harga</th>
+                    <th class="px-4 py-2 border">Jumlah</th>
+                    <th class="px-4 py-2 border">Edit</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-6">
+        <h2 class="text-2xl font-semibold mb-4">Pembelian Barang</h2>
+        <form id="purchaseForm" class="space-y-4">
+            <div>
+                <label for="purchaseItemId" class="block text-sm font-medium text-gray-700">Item ID:</label>
+                <input type="number" id="purchaseItemId" min="0" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+            </div>
+            <div>
+                <label for="purchaseQuantity" class="block text-sm font-medium text-gray-700">Jumlah:</label>
+                <input type="number" id="purchaseQuantity" min="1" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+            </div>
+            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-md shadow-md hover:bg-green-600">Beli</button>
+        </form>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-6">
+        <h2 class="text-2xl font-semibold mb-4">Riwayat Pembelian</h2>
+        <table id="purchaseHistoryTable" class="min-w-full bg-white border border-gray-200">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border">Barang ID</th>
+                    <th class="px-4 py-2 border">Jumlah</th>
+                    <th class="px-4 py-2 border">Total Harga</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="js/back.js">
+        
+    </script>
+</body>
+</html>
